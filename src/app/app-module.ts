@@ -6,13 +6,19 @@ import { App } from './app';
 import { Navbar } from './layout/navbar/navbar';
 import { Footer } from './layout/footer/footer';
 import { Carousel } from './layout/carousel/carousel';
+import { HomeFeatures } from './components/home-features/home-features';
+import { Testimonials } from './components/testimonials/testimonials';
+import { PlatformIntro } from './components/platform-intro/platform-intro';
 
 @NgModule({
   declarations: [
     App,
     Navbar,
     Footer,
-    Carousel
+    Carousel,
+    HomeFeatures,
+    Testimonials,
+    PlatformIntro
   ],
   imports: [
     BrowserModule,

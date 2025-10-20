@@ -1,16 +1,94 @@
-<header class="bg-light shadow-sm">
-  <div class="container mx-auto px-6 py-3 flex items-center">
+<header class="bg-white border-b border-gray-200 relative z-30">
+  
+  <div class="container mx-auto px-6 py-3 flex justify-between items-center">
     
-    <a href="/" class="flex items-center space-x-4">
-      <img src="assets/img/logo-saludprox.png" alt="SaludProx Logo" class="h-10 w-auto">
-      
-      <span class="text-xl font-semibold text-primary hidden sm:block">
-        La Plataforma de Salud Integral
-      </span>
+    <a href="/" class="flex items-center">
+      <img src="assets/img/logo-hubio.png" alt="Hubio Health Logo" class="h-10 w-auto"> 
     </a>
 
-    <div class="ml-auto">
+    <div class="flex items-center space-x-4">
+      
+      <div class="hidden md:flex items-center space-x-4">
+        <a href="#" class="flex items-center space-x-1.5 text-sm text-gray-700 hover:text-primary transition-colors">
+          <img src="../../../assets/img/carrosel.jpg" alt="Bandera de España" class="w-5 h-auto rounded-sm">
+          <span class="font-medium">Español</span>
+        </a>
+        <a href="#" class="flex items-center space-x-1.5 text-sm text-gray-700 hover:text-primary transition-colors">
+          <img src="assets/img/flag-en.png" alt="Bandera de USA/UK" class="w-5 h-auto rounded-sm">
+          <span>English</span>
+        </a>
       </div>
 
+      <button (click)="toggleMenu()" class="md:hidden p-2 rounded-md text-gray-700 hover:bg-gray-100 focus:outline-none">
+        <span class="sr-only">Abrir menú</span>
+        <svg *ngIf="!isMenuOpen" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+        </svg>
+        <svg *ngIf="isMenuOpen" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+        </svg>
+      </button>
+
+    </div>
   </div>
+
+  <nav class="container mx-auto px-6 hidden md:flex justify-center items-center space-x-8">
+    
+    <a href="#" class="py-4 text-gray-800 font-medium hover:text-primary transition-colors duration-200">
+      Inicio
+    </a>
+
+    <div class="relative group">
+      <a href="#" class="py-4 text-gray-800 font-medium hover:text-primary transition-colors duration-200 flex items-center space-x-1">
+        <span>Quiénes somos</span>
+        <svg class="w-4 h-4 text-gray-500 group-hover:text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+      </a>
+      <div class="absolute top-full left-0 bg-white shadow-lg rounded-b-md py-2 w-56 hidden group-hover:block z-50">
+        <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-primary">Nuestra Misión</a>
+        <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-primary">El Equipo</a>
+        <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-primary">Transparencia</a>
+      </div>
+    </div>
+    <a href="#" class="py-4 text-gray-800 font-medium hover:text-primary transition-colors duration-200">
+      DONAR
+    </a>
+    <a href="#" class="py-4 text-gray-800 font-medium hover:text-primary transition-colors duration-200">
+      Solicitar Ayuda
+    </a>
+    <a href="#" class="py-4 text-gray-800 font-medium hover:text-primary transition-colors duration-200">
+      Blog
+    </a>
+  </nav>
 </header>
+
+<div [class.hidden]="!isMenuOpen" class="md:hidden bg-white shadow-lg w-full absolute z-20">
+  
+  <a href="#" class="block px-6 py-3 text-gray-800 font-medium hover:bg-gray-50">Inicio</a>
+  
+  <div class="px-6 py-3">
+    <span class="text-gray-500 text-sm font-bold uppercase">Quiénes somos</span>
+    <a href="#" class="block pl-4 py-2 text-gray-700 rounded hover:bg-gray-50">Nuestra Misión</a>
+    <a href="#" class="block pl-4 py-2 text-gray-700 rounded hover:bg-gray-50">El Equipo</a>
+  </div>
+
+  <div class="px-6 py-3">
+    <span class="text-gray-500 text-sm font-bold uppercase">Nuestro Trabajo</span>
+    <a href="#" class="block pl-4 py-2 text-gray-700 rounded hover:bg-gray-50">Proyectos Actuales</a>
+    <a href="#" class="block pl-4 py-2 text-gray-700 rounded hover:bg-gray-50">Impacto</a>
+  </div>
+  
+  <a href="#" class="block px-6 py-3 text-gray-800 font-medium hover:bg-gray-50">DONAR</a>
+  <a href="#" class="block px-6 py-3 text-gray-800 font-medium hover:bg-gray-50">Solicitar Ayuda</a>
+  <a href="#" class="block px-6 py-3 text-gray-800 font-medium hover:bg-gray-50">Blog</a>
+
+  <div classs="border-t border-gray-100 px-6 py-4 flex space-x-4">
+      <a href="#" class="flex items-center space-x-1.5 text-sm text-gray-700 hover:text-primary transition-colors">
+        <img src="assets/img/flag-es.png" alt="Bandera de España" class="w-5 h-auto rounded-sm">
+        <span class="font-medium">Español</span>
+      </a>
+      <a href="#" class="flex items-center space-x-1.5 text-sm text-gray-700 hover:text-primary transition-colors">
+        <img src="assets/img/flag-en.png" alt="Bandera de USA/UK" class="w-5 h-auto rounded-sm">
+        <span>English</span>
+      </a>
+  </div>
+</div>

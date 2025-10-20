@@ -1,29 +1,34 @@
-<section class="relative h-[600px] md:h-[700px] text-white overflow-hidden">
+<section class="relative h-[600px] md:h-[700px] flex items-center justify-center text-white overflow-hidden">
+  
+  <div class="absolute inset-0 bg-cover bg-center bg-no-repeat"
+       style="background-image: url('./assets/carrosel.jpg');">
+    
+    <div class="absolute inset-0 bg-dark opacity-70"></div>
+  </div>
+  
+  <div class="relative z-10 text-center max-w-3xl mx-auto px-4">
+    <p class="text-primary font-bold text-lg uppercase mb-4">CUIDA TU SALUD</p>
+    <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold leading-tight mb-6">Salud = Bienestar</h1>
+    <p class="text-base sm:text-lg md:text-xl leading-relaxed mb-8 px-2">
+      Conoce tu estado de salud y establece acciones para lograr una vida saludable con
+      la aplicación de acceso gratuito de Hub.io Health.
+    </p>
+    
+    <button class="bg-white text-primary hover:bg-gray-200 transition-colors duration-300 font-semibold py-3 px-8 rounded-full shadow-lg text-lg mb-4 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2">
+      Comenzar a cuidar mi salud
+    </button>
+    
+    <p class="text-sm">
+      ¿Ya tienes tu cuenta? <a href="/auth/login" class="text-primary hover:underline font-medium">Ingresa aquí</a>
+    </p>
+  </div>
 
-
-      <div class="relative h-full flex items-center justify-center">
-        <div class="absolute inset-0 bg-cover bg-center" [style.background-image]="'url(' + slide.imageUrl + ')'">
-          <div class="absolute inset-0 bg-dark opacity-70"></div>
-        </div>
-
-        <div class="relative z-10 text-center max-w-3xl mx-auto px-4">
-          <p class="text-primary font-bold text-lg uppercase mb-4">{{ slide.tagline }}</p>
-          <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold leading-tight mb-6">{{ slide.title }}</h1>
-          <p class="text-base sm:text-lg md:text-xl leading-relaxed mb-8 px-2">{{ slide.subtitle }}</p>
-          
-          <button class="bg-white text-primary hover:bg-gray-200 transition-colors duration-300 font-semibold py-3 px-8 rounded-full shadow-lg text-lg mb-4 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2">
-            Comenzar a cuidar mi salud
-          </button>
-          
-          <p class="text-sm">
-            ¿Ya tienes tu cuenta? <a routerLink="/auth/login" class="text-primary hover:underline font-medium">Ingresa aquí</a>
-          </p>
-        </div>
-      </div>
- 
   <div class="absolute right-0 top-1/2 -translate-y-1/2 flex flex-col space-y-3 p-2 bg-dark bg-opacity-70 rounded-l-lg z-20">
-      <a href="#" class="block w-8 h-8 rounded flex items-center justify-center text-white hover:opacity-80 transition-opacity">
-        <img src="assets/img/icon-linkedin.png" alt="LinkedIn" class="w-5 h-5">
-      </a>
-      </div>
+    <a href="#" class="block w-8 h-8 rounded flex items-center justify-center text-white hover:opacity-80 transition-opacity">
+      <img src="assets/img/icon-linkedin.png" alt="LinkedIn" class="w-5 h-5">
+    </a>
+    <a href="#" class="block w-8 h-8 rounded flex items-center justify-center text-white hover:opacity-80 transition-opacity">
+      <img src="assets/img/icon-facebook.png" alt="Facebook" class="w-5 h-5">
+    </a>
+  </div>
 </section>
