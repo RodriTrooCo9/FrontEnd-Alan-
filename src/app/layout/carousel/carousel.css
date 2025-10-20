@@ -1,0 +1,13 @@
+
+@import 'swiper/css';
+@import 'swiper/css/navigation';
+@import 'swiper/css/pagination';
+
+:host ::ng-deep .swiper-button-next,
+:host ::ng-deep .swiper-button-prev {
+  color: #3498db; 
+}
+
+:host ::ng-deep .swiper-pagination-bullet-active {
+  background-color: #3498db; 
+}
